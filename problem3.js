@@ -1,27 +1,31 @@
 
-// Prime Problem
-function identifyPrime(num) {
-  let c = 0;
-  for (i = 1; i <= num; i++) {
-    if (num % i == 0) {
-      c++;
-    }
-  }
-  if (c == 2) {
-    console.log("Yes")
-  }
-  else
-    console.log("No")
+// Prime Palindrome
+
+let num=121;
+let temp=num;
+let final=0;
+let rem=0;
+while(num>0){
+    rem=num%10;
+    num= parseInt(num/10);
+	final = final*10+rem;
+}
+if(final==temp){
+			console.log("Its palindrome");
+}
+else{
+			console.log("Its not palindrome");
 }
 
-// Detect Palindrome
-function detectPalindrome(num) {
-
-  let N = num.length
-  let msg = "Yes"
-  for (i = 0; i < N / 2; i++) {
-    if (num[i] != num[N - 1 - i]) {
-      msg = "No";
+// Detect Prime
+let Num=13;
+  let count=0;
+  for(let x=0;x<=Num;x++){
+    if(Num%x==0){
+      count++;
     }
-  } console.log(msg);
-}
+  }
+ if(count==2){
+console.log("Prime")}
+else{
+console.log("not prime")}
